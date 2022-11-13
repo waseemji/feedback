@@ -1,0 +1,15 @@
+{% extends 'reviews/base.html' %}
+
+{% block title %}
+    What they say
+{% endblock  %}
+
+{% block content %}
+    <h1>Name {{object.user_name}} </h1>
+    {% comment %} object.user_name works {% endcomment %}
+    {% comment %} how this work is that Django uses model name (in smallcases) use it as objectname  {% endcomment %}
+    <p>Rating: {{review.rating}} </p>
+    <p>{{review.user_name}} says {{review.review_text}} </p>
+{% endblock content %}
+
+
