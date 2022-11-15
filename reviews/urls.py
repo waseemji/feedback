@@ -7,5 +7,6 @@ urlpatterns = [
     path("",views.ReviewView.as_view()),
     path("thank-you",views.ThankyouView.as_view()),
     path("reviews",views.ReviewsListView.as_view()),
-    path("reviews/<int:pk>",views.DetailedReviewView.as_view()) #use <int:pk> when using DetailView
+    path("reviews/favorite",views.AddFavoriteView.as_view()),
+    path("reviews/<int:pk>",views.DetailedReviewView.as_view()), #use <int:pk> when using DetailView
 ]

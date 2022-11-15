@@ -9,7 +9,17 @@
     {% comment %} object.user_name works {% endcomment %}
     {% comment %} how this work is that Django uses model name (in smallcases) use it as objectname  {% endcomment %}
     <p>Rating: {{review.rating}} </p>
+
     <p>{{review.user_name}} says {{review.review_text}} </p>
+    {% if is_favorite %}
+        <p>This is my Favorite</p>
+    {% else %}
+        <form action="/reviews/favorite" method="POST">
+            {% csrf_token %}
+            <input type="hidden" name ="review_id" value= "{{review.id}} ">
+            <button> Favorite</button>
+        </form>
+    {% endif %}
 {% endblock content %}
 
 

@@ -120,3 +120,5 @@ DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
 MEDIA_ROOT = BASE_DIR / "uploads"
 MEDIA_URL = "/user-media/"
+
+# SESSION_COOKIE_AGE = 120  #aCTIVATES THE COOKIE FOR 120 SECONDS OR 2 MINS
